@@ -1,4 +1,5 @@
 import React from 'react';
+import { string } from 'prop-types';
 
 const Smilies = ({ className }) => (
 	<svg className={className} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="133" height="78" viewBox="0 0 133 78">
@@ -24,5 +25,9 @@ const Smilies = ({ className }) => (
 		</g>
 	</svg>
 );
+
+Smilies.propTypes = {
+  className: string,
+}
 
 export default Smilies;

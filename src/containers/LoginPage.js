@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 import { func } from 'prop-types';
 
 import LandingLayout from '../components/LandingLayout';
@@ -13,11 +13,15 @@ class LoginPage extends Component {
 
     return (
       <LandingLayout>
-        <div className="Login">
+        <div className="login-container">
           <Smilies className="app-logo"/>
           <h1 className="app-header"> TARGET MVD </h1>
           <h2 className="app-subtitle"> Find people near you & Connect </h2>
-          <p className="app-description"> Create a target wherever on the map, specify your interest (Travel, Dating, Music, etc.) and start conecting with others who share your interest. </p>
+          <p className="app-description">
+            Create a target wherever on the map, specify your
+            interest (Travel, Dating, Music, etc.) and start
+            conecting with others who share your interest.
+          </p>
           <LoginForm
             isLoading={isLoading}
             errors={errors}

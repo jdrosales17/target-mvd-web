@@ -5,7 +5,7 @@ import landing from '../assets/images/landing.png';
 
 function LandingLayout({ children }) {
   return (
-    <div className="Landing">
+    <div className="landing-container">
       {children}
       <div className="landing-img-container">
         <img src={landing} alt="Landing" />

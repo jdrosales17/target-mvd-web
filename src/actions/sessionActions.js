@@ -3,12 +3,12 @@ import * as sessionService from '../services/session';
 
 export const signInStart = () => ({ type: SIGN_IN_START });
 
-export const signInSuccess = (user) => ({
+export const signInSuccess = user => ({
   type: SIGN_IN_SUCCESS,
   user,
 });
 
-export const signInFail = (errors) => ({
+export const signInFail = errors => ({
   type: SIGN_IN_FAIL,
   errors,
 });

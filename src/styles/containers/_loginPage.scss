@@ -1,16 +1,8 @@
-.Landing {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  height: 100vh;
-}
-
-.Login {
+.login-container {
   align-items: center;
   display: flex;
   flex: 1;
   flex-direction: column;
-  font-family: 'Open Sans', sans-serif;
   font-size: 11px;
   font-weight: 600;
   justify-content: center;
@@ -18,16 +10,7 @@
   text-align: center;
 }
 
-.landing-img-container {
-  flex: 1;
-  min-width: 400px;
-
-  & img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
-}
+.app-logo { margin-top: 70px; }
 
 .app-header {
   font-size: 20px;
@@ -52,40 +35,6 @@
   margin: 0 28% 49px 28%;
 }
 
-.app-logo { margin-top: 70px; }
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  letter-spacing: 1.7px;
-  width: 30%;
-}
-
-.login-form-label { padding: 5px; }
-
-.login-form-input {
-  height: 20px;
-  margin-bottom: 22px;
-  min-width: 100px;
-  padding: 5px;
-}
-
-.login-form-button {
-  background-color: black;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-  color: white;
-  font-weight: 600;
-  height: 37px;
-  letter-spacing: 1.7px;
-  margin-bottom: 15px;
-  padding: 5px;
-}
-
-.login-form-error {
-  color: red;
-  font-weight: normal;
-}
-
 .forgot-password-link {
   margin-bottom: 55px;
   margin-top: 0;
@@ -99,7 +48,7 @@
 }
 
 .separator {
-  border: solid .5px black;
+  border: solid .5px $black;
   width: 121px;
   margin: 0;
 }

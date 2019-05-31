@@ -14,8 +14,7 @@ class LoginForm extends Component {
   }
 
   handleInputChange = (event) => {
-    const value = event.target.value;
-    const name = event.target.name;
+    const { target: { name, value } } = event;
 
     this.setState({
       [name]: value
