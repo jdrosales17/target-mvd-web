@@ -1,5 +1,5 @@
-import axios from "./config";
+import axios from './config';
 
-export const signIn = credentials => {
-  return axios.post('/auth/sign_in', credentials);
-}
+export const signIn = credentials => (
+  axios.post('/auth/sign_in', credentials)
+);

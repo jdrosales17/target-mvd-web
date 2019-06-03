@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bool, array, func } from 'prop-types';
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -27,6 +27,7 @@ class LoginForm extends Component {
   }
 
   render() {
+    const { email, password } = this.state;
     const { isLoading, errors } = this.props;
 
     return (
@@ -38,7 +39,7 @@ class LoginForm extends Component {
           name="email"
           placeholder="Enter your email..."
           type="email"
-          value={this.state.email}
+          value={email}
           onChange={this.handleInputChange}
         />
         <label className="login-form-label" htmlFor="password">PASSWORD</label>
@@ -48,11 +49,11 @@ class LoginForm extends Component {
           name="password"
           placeholder="Enter your password..."
           type="password"
-          value={this.state.password}
+          value={password}
           onChange={this.handleInputChange}
         />
-        <button type="submit" className="login-form-button" disabled={!this.state.email || !this.state.password}>
-          {isLoading ? <FontAwesomeIcon icon={faSpinner} spin/> : 'SIGN IN'}
+        <button type="submit" className="login-form-button" disabled={!email || !password}>
+          {isLoading ? <FontAwesomeIcon icon={faSpinner} spin /> : 'SIGN IN'}
         </button>
         {errors.map(error => <p className="login-form-error" key={error}>{error}</p>)}
       </form>
@@ -64,6 +65,6 @@ LoginForm.propTypes = {
   isLoading: bool.isRequired,
   errors: array.isRequired,
   onSubmit: func.isRequired,
-}
+};
 
 export default LoginForm;

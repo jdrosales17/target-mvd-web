@@ -9,26 +9,29 @@ const initialState = {
 
 const sessionReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SIGN_IN_START:
+    case SIGN_IN_START: {
       return {
         ...state,
         isLoading: true,
       };
-    case SIGN_IN_SUCCESS:
+    }
+    case SIGN_IN_SUCCESS: {
       const user = { ...action.user };
       return {
         ...state,
-        user: user,
+        user,
         isLoading: false,
         isAuthenticated: true,
       };
-    case SIGN_IN_FAIL:
-      const errors = [ ...action.errors ];
+    }
+    case SIGN_IN_FAIL: {
+      const errors = [...action.errors];
       return {
         ...state,
         isLoading: false,
-        errors: errors,
+        errors,
       };
+    }
     default:
       return state;
   }

@@ -13,13 +13,12 @@ export const signInFail = errors => ({
   errors,
 });
 
-// Thunks
-export const signIn = (credentials) => async dispatch => {
+export const signIn = credentials => async (dispatch) => {
   dispatch(signInStart());
   try {
-    const { data: { data }} = await sessionService.signIn(credentials);
+    const { data: { data } } = await sessionService.signIn(credentials);
     dispatch(signInSuccess(data));
-  } catch ({ data: { errors }}) {
+  } catch ({ data: { errors } }) {
     dispatch(signInFail(errors));
   }
 };
