@@ -3,6 +3,8 @@ import { bool, array, func } from 'prop-types';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import FormInput from './common/FormInput';
+
 class LoginForm extends Component {
   constructor(props) {
     super(props);
@@ -32,25 +34,21 @@ class LoginForm extends Component {
 
     return (
       <form className="login-form" onSubmit={this.handleSubmit}>
-        <label className="login-form-label" htmlFor="email">EMAIL</label>
-        <input
-          className="login-form-input"
-          id="email"
+        <FormInput
           name="email"
+          label="EMAIL"
           placeholder="Enter your email..."
           type="email"
           value={email}
-          onChange={this.handleInputChange}
+          handleInputChange={this.handleInputChange}
         />
-        <label className="login-form-label" htmlFor="password">PASSWORD</label>
-        <input
-          className="login-form-input"
-          id="password"
+        <FormInput
           name="password"
+          label="PASSWORD"
           placeholder="Enter your password..."
           type="password"
           value={password}
-          onChange={this.handleInputChange}
+          handleInputChange={this.handleInputChange}
         />
         <button type="submit" className="login-form-button" disabled={!email || !password}>
           {isLoading ? <FontAwesomeIcon icon={faSpinner} spin /> : 'SIGN IN'}
