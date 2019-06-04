@@ -1,0 +1,54 @@
+.login-container {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 400px;
+  text-align: center;
+}
+
+.app-logo { margin-top: 70px; }
+
+.app-header {
+  letter-spacing: 3px;
+  line-height: 27px;
+  margin-bottom: 13px;
+  margin-top: 16px;
+}
+
+.app-subtitle {
+  line-height: 32px;
+  margin: 0 0 10px 0;
+}
+
+.app-description {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+  margin: 0 28% 49px 28%;
+}
+
+.forgot-password-link {
+  margin-bottom: 55px;
+  margin-top: 0;
+}
+
+.facebook-link {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2.4px;
+  margin-top: 0;
+}
+
+.separator {
+  border: solid .5px $black;
+  width: 121px;
+  margin: 0;
+}
+
+.sign-up-link {
+  letter-spacing: 1.7px;
+  margin-bottom: 68px;
+  margin-top: 15px;
+}
