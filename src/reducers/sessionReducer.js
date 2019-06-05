@@ -3,7 +3,7 @@ import { SIGN_IN_START, SIGN_IN_SUCCESS, SIGN_IN_FAIL } from '../actions/actionT
 const initialState = {
   user: {},
   isLoading: false,
-  isAuthenticated: false,
+  authHeaders: {},
   errors: [],
 };
 
@@ -16,12 +16,13 @@ const sessionReducer = (state = initialState, action) => {
       };
     }
     case SIGN_IN_SUCCESS: {
-      const user = { ...action.user };
+      const { headers, user } = action;
       return {
         ...state,
         user,
         isLoading: false,
-        isAuthenticated: true,
+        authHeaders: headers,
+        errors: [],
       };
     }
     case SIGN_IN_FAIL: {

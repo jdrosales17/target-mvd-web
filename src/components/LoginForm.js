@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { bool, array, func } from 'prop-types';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import FormInput from './common/FormInput';
+import Loading from './common/Loading';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -51,7 +50,7 @@ class LoginForm extends Component {
           handleInputChange={this.handleInputChange}
         />
         <button type="submit" className="login-form-button" disabled={!email || !password}>
-          {isLoading ? <FontAwesomeIcon icon={faSpinner} spin /> : 'SIGN IN'}
+          {isLoading ? <Loading fixed={false} /> : 'SIGN IN'}
         </button>
         {errors.map(error => <p className="login-form-error" key={error}>{error}</p>)}
       </form>

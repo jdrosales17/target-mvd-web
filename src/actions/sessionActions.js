@@ -3,8 +3,9 @@ import * as sessionService from '../services/session';
 
 export const signInStart = () => ({ type: SIGN_IN_START });
 
-export const signInSuccess = user => ({
+export const signInSuccess = (headers, user) => ({
   type: SIGN_IN_SUCCESS,
+  headers,
   user,
 });
 
@@ -16,8 +17,11 @@ export const signInFail = errors => ({
 export const signIn = credentials => async (dispatch) => {
   dispatch(signInStart());
   try {
-    const { data: { data } } = await sessionService.signIn(credentials);
-    dispatch(signInSuccess(data));
+    const {
+      headers: { 'access-token': token, client, uid },
+      data: { data }
+    } = await sessionService.signIn(credentials);
+    dispatch(signInSuccess({ token, client, uid }, data));
   } catch ({ data: { errors } }) {
     dispatch(signInFail(errors));
   }

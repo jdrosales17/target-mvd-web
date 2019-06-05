@@ -1,0 +1,17 @@
+.loading-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.5);
+  z-index: 999;
+
+  &.fixed {
+    background-color: rgba(0, 0, 0, .35);
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(1);
+    width: 100%;
+  }
+}
