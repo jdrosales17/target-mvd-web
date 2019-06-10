@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
+    "humps": "^2.0.1",
     "loaders.css": "^0.1.2",
     "localforage": "^1.7.3",
     "lodash": "^4.17.11",
