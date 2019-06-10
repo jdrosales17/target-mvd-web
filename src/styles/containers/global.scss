@@ -10,3 +10,9 @@ h1 {
 }
 
 h2 { font-size: 18px; }
+
+.separator {
+  border: solid .5px $black;
+  width: 121px;
+  margin: 0;
+}

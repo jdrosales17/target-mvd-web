@@ -1,11 +1,11 @@
-.login-form {
+.form-container {
   display: flex;
   flex-direction: column;
   letter-spacing: 1.7px;
   width: 30%;
 }
 
-.login-form-button {
+.form-button {
   background-color: $black;
   box-shadow: 0 2px 4px 0 rgba($black, .25);
   color: $white;
@@ -16,7 +16,9 @@
   padding: 5px;
 }
 
-.login-form-error {
+.form-error {
   color: $red;
   font-weight: normal;
+  margin-bottom: 15px;
+  margin-top: 0;
 }
